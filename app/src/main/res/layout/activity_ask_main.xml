@@ -2,6 +2,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!--    주완이와 선우의 운세(luck)xml페이지-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
