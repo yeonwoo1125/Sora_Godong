@@ -14,12 +14,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn;
+        Button btn, btn_luck;
         btn = (Button) findViewById(R.id.btn);
+        btn_luck = findViewById(R.id.btn_luck);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),Calendar.class);
+                startActivity(intent);
+            }
+        });
+        btn_luck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Luck.class);
                 startActivity(intent);
             }
         });
