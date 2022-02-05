@@ -40,6 +40,8 @@ public class Calendar extends AppCompatActivity {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
                 Intent intent=new Intent(getApplicationContext(),Diary.class);
+
+                //선택한 날짜를 Diary 페이지로 넘김
                 intent.putExtra("date",calendarView.getSelectedDate().toString());
                 startActivity(intent);
             }
