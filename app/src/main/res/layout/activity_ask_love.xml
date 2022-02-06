@@ -16,7 +16,6 @@
         android:layout_width="700px"
         android:layout_height="100px"
         android:background="@drawable/ask_radius_2"
-        android:backgroundTint="@color/white"
         android:layout_gravity="center"
         android:hint="Q. 당신의 질문을 적어주세요."
         android:textSize="45px"
