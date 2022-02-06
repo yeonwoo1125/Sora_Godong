@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sora_Godong">
         <activity android:name=".Luck"></activity>
+        <activity android:name=".LuckAnswer"></activity>
         <activity android:name=".Diary" android:theme="@style/Theme.AppCompat.DayNight.Dialog"/>
         <activity android:name=".Calendar" />
         <activity android:name=".MainActivity">
