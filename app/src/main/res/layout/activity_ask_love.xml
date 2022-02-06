@@ -9,8 +9,8 @@
     <!--주완아 보이니~-->
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bbororo"
+        android:layout_height="265dp"
+        android:src="@drawable/main_character"
         android:layout_marginTop="400px"/>
     <EditText
         android:layout_width="700px"
@@ -21,7 +21,7 @@
         android:textSize="45px"
         android:gravity="center"
         android:textStyle="bold"
-        android:layout_marginTop="30px"/>
+ />
 
     <Button
         android:layout_width="550px"

@@ -9,8 +9,8 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bbororo"
+        android:layout_height="265dp"
+        android:src="@drawable/main_character"
         android:layout_marginTop="400px"/>
 
     <TextView
@@ -22,7 +22,6 @@
         android:textSize="45px"
         android:gravity="center"
         android:textStyle="bold"
-        android:layout_marginTop="30px"
         android:text="당겨라"/>
 
 <!--    <EditText
