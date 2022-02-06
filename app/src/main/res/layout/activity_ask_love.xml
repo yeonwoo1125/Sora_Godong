@@ -5,24 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/sora_back">
+    android:background="@drawable/background">
     <!--주완아 보이니~-->
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bbororo"
+        android:layout_height="265dp"
+        android:src="@drawable/main_character"
         android:layout_marginTop="400px"/>
     <EditText
         android:layout_width="700px"
         android:layout_height="100px"
         android:background="@drawable/ask_radius_2"
-        android:backgroundTint="@color/white"
         android:layout_gravity="center"
         android:hint="Q. 당신의 질문을 적어주세요."
         android:textSize="45px"
         android:gravity="center"
         android:textStyle="bold"
-        android:layout_marginTop="30px"/>
+ />
 
     <Button
         android:layout_width="550px"

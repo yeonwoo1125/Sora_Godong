@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:src="@drawable/main_character"
+        android:layout_marginTop="400px"/>
+
+    <TextView
+        android:layout_width="700px"
+        android:layout_height="120px"
+        android:background="@drawable/ask_radius_2"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
+        android:textSize="45px"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="당겨라"/>
+
+<!--    <EditText
+        android:layout_width="700px"
+        android:layout_height="100px"
+        android:background="@drawable/ask_radius_2"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
+        android:hint="Q. 당신의 질문을 적어주세요."
+        android:textSize="45px"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="30px"/>-->
+<!--    주완이와 선우의 운세(luck)xml페이지-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px"
+            android:background="@drawable/ask_radius"
+            android:text="캘린더 쓰기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:backgroundTint="#D2B3DC"
+            android:layout_marginLeft="40dp"/>
+
+        <Button
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px"
+            android:background="@drawable/ask_radius"
+            android:text="다시 질문하기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:backgroundTint="#D2B3DC"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+</LinearLayout>
