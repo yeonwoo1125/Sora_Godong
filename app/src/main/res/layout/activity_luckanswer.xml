@@ -24,19 +24,84 @@
             android:layout_height="190dp"
             android:scaleType="centerCrop"
             android:src="@drawable/bosal"/>
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_height="280dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="-8dp"
             android:background="@color/white">
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </ScrollView>
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0월 0일 미니 운세"
+                    android:textSize="41px"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="운세 내용"
+                    android:textSize="39px"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="금전운"
+                    android:textSize="39px"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="연애운"
+                    android:textSize="39px"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="학업운"
+                    android:textSize="39px"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="건강운"
+                    android:textSize="39px"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/text7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="0월 0일 행운의 색"
+                    android:textSize="41px"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/text8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="색깔"
+                    android:textSize="39px"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
