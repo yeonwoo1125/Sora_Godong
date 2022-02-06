@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/sora_back">
+    android:background="@drawable/background">
     <!--주완아 보이니~-->
     <ImageView
         android:layout_width="match_parent"
