@@ -2,17 +2,21 @@ package mirim.msg.sora_godong;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
+import android.app.Activity;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class LuckAnswer extends AppCompatActivity {
-
+public class LuckAnswer extends AppCompatActivity{
+    myDBHelper myDBHelper;
+    SQLiteDatabase sqlDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +27,7 @@ public class LuckAnswer extends AppCompatActivity {
 
         long now = System.currentTimeMillis();
         Date date = new Date(now);
-        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String getTime = sdf.format(date);
         String[] ret = getTime.split("-");
 
@@ -71,7 +75,6 @@ public class LuckAnswer extends AppCompatActivity {
             double randDouble2 = Math.random();
             int randInt2 = (int)(randDouble2 * stars.length);
             luckAnswer[i] = stars[randInt2];
-            System.out.println(luckAnswer[i]);
         }
 
         String[] luckColor = {
@@ -84,7 +87,7 @@ public class LuckAnswer extends AppCompatActivity {
         int randInt3 = (int)(randDouble3 * luckColor.length);
 
         TextView text1 = findViewById(R.id.text1);
-        text1.setText(ret[0] + "월 " + ret[1] + "일 미니 운세");
+        text1.setText(ret[1] + "월 " + ret[2] + "일 미니 운세");
 
         TextView text2 = findViewById(R.id.text2);
         text2.setText(luckTotalAnswer[randInt1]);
@@ -102,9 +105,40 @@ public class LuckAnswer extends AppCompatActivity {
         text6.setText("건강운  " + luckAnswer[3]);
 
         TextView text7 = findViewById(R.id.text7);
-        text7.setText(ret[0] + "월 " + ret[1] + "일 행운의 색");
+        text7.setText(ret[1] + "월 " + ret[2] + "일 행운의 색");
 
         TextView text8 = findViewById(R.id.text8);
         text8.setText(luckColor[randInt3]);
+
+        myDBHelper = new myDBHelper(this);
+
+        try{
+            sqlDB = myDBHelper.getWritableDatabase();
+            sqlDB.execSQL("INSERT INTO luckTB VALUES ('" + getTime + "', '" + luckTotalAnswer[randInt1] + "' , '" + luckAnswer[0] + "' , '" + luckAnswer[1] + "', '" + luckAnswer[2] + "', '" + luckAnswer[3] + "', '" + luckColor[randInt3] + "');");
+            sqlDB.close();
+        }catch (Exception e){
+            finish();
+        }
+
     }
+
+    static class myDBHelper extends SQLiteOpenHelper {
+        public myDBHelper(Context context) {
+            super(context, "groupDB", null, 1);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL("CREATE TABLE luckTB (testDate DATE PRIMARY KEY, luckTotal VARCHAR, moneyAnswer VARCHAR, loveAnswer VARCHAR, studyAnswer VARCHAR, healthAnswer VARCHAR, color VARCHAR);");
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            db.execSQL("DROP TABLE IF EXISTS luckTB");
+            onCreate(db);
+
+        }
+    }
+
+
 }
