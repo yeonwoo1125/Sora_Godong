@@ -31,6 +31,7 @@ public class Luck extends AppCompatActivity {
     LuckAnswer.myDBHelper myDBHelper;
     SQLiteDatabase sqlDB;
     Animation luck_anim;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,8 @@ public class Luck extends AppCompatActivity {
 
         Cursor cursor = sqlDB.rawQuery("SELECT * FROM luckTB where testDate = '" + getTime + "';", null);
 
-        luck_anim= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.luck_anim);
+        luck_anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.luck_anim);
+        imageView = (ImageView)findViewById(R.id.imageView);
 
         if(cursor.getCount() == 1){
             setContentView(R.layout.activity_luckanswer);
@@ -89,7 +91,7 @@ public class Luck extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    btn.startAnimation(luck_anim);
+                    imageView.startAnimation(luck_anim);
                     Intent intent = new Intent(getApplicationContext(), LuckAnswer.class);
                     startActivity(intent);
                     finish();
