@@ -15,7 +15,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -27,6 +30,9 @@ import java.util.List;
 public class Luck extends AppCompatActivity {
     LuckAnswer.myDBHelper myDBHelper;
     SQLiteDatabase sqlDB;
+    Animation luck_anim;
+    ImageView image;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,9 @@ public class Luck extends AppCompatActivity {
         sqlDB = myDBHelper.getReadableDatabase();
 
         Cursor cursor = sqlDB.rawQuery("SELECT * FROM luckTB where testDate = '" + getTime + "';", null);
+
+        luck_anim= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.luck_anim);
+        image=findViewById(R.id.image);
 
         if(cursor.getCount() == 1){
             setContentView(R.layout.activity_luckanswer);
@@ -81,6 +90,7 @@ public class Luck extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    image.startAnimation(luck_anim);
                     Intent intent = new Intent(getApplicationContext(), LuckAnswer.class);
                     startActivity(intent);
                     finish();
