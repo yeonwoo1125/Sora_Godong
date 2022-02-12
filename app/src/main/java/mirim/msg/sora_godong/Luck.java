@@ -13,6 +13,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.Layout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,6 +29,8 @@ import android.widget.Toolbar;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class Luck extends AppCompatActivity {
     LuckAnswer.myDBHelper myDBHelper;
@@ -47,13 +52,13 @@ public class Luck extends AppCompatActivity {
         String getTime = sdf.format(date);
 
         sqlDB = myDBHelper.getReadableDatabase();
-        sqlDB.execSQL("delete from luckTB where testDate = '2022-02-11'");
 
+        // 디비에서 현재 날짜 검색 후 Cursor로 변환
         Cursor cursor = sqlDB.rawQuery("SELECT * FROM luckTB where testDate = '" + getTime + "';", null);
 
-        luck_anim= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.luck_anim);
+        luck_anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.luck_anim);
 
-        if(cursor.getCount() == 1){
+        if(cursor.getCount() == 1){ // cursor 개수가 1개인지 확인(오늘 운세 확인을 했는지 확인)
             setContentView(R.layout.activity_luckanswer);
             String[] ret = getTime.split("-");
 
@@ -86,13 +91,20 @@ public class Luck extends AppCompatActivity {
             setContentView(R.layout.activity_luck);
             Button btn;
             btn = findViewById(R.id.btn);
+            ImageView imageView = findViewById(R.id.image);
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    btn.startAnimation(luck_anim);
-                    Intent intent = new Intent(getApplicationContext(), LuckAnswer.class);
-                    startActivity(intent);
-                    finish();
+                    imageView.startAnimation(luck_anim);
+                    btn.setVisibility(View.INVISIBLE); // 버튼 안 보이게 하기
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() { // 일정 시간 후 안에 코드 실행
+                        @Override public void run() {
+                            Intent intent = new Intent(getApplicationContext(), LuckAnswer.class);
+                            startActivity(intent); // 인텐트(LuckAnswer) 실행
+                            finish(); // 액티비티(Luck) 종료
+                        }
+                    },5850); // 5.85초 딜레이
                 }
             });
         }

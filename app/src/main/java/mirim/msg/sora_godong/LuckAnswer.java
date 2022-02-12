@@ -114,10 +114,11 @@ public class LuckAnswer extends AppCompatActivity{
 
         try{
             sqlDB = myDBHelper.getWritableDatabase();
+            // 운세 결과 디비에 저장
             sqlDB.execSQL("INSERT INTO luckTB VALUES ('" + getTime + "', '" + luckTotalAnswer[randInt1] + "' , '" + luckAnswer[0] + "' , '" + luckAnswer[1] + "', '" + luckAnswer[2] + "', '" + luckAnswer[3] + "', '" + luckColor[randInt3] + "');");
             sqlDB.close();
-        }catch (Exception e){
-            finish();
+        }catch (Exception e){ // 예외가 발생하면
+            finish(); // 액티비티(LuckAnswer) 종료
         }
 
     }
