@@ -14,9 +14,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn, btn_luck;
+        Button btn, btn_luck,btn_ask;
         btn = (Button) findViewById(R.id.btn);
         btn_luck = findViewById(R.id.btn_luck);
+        btn_ask = findViewById(R.id.btn_ask);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Luck.class);
+                startActivity(intent);
+            }
+        });
+        btn_ask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AskAnswer.class);
                 startActivity(intent);
             }
         });

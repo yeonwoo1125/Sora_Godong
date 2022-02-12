@@ -24,26 +24,13 @@
         android:textStyle="bold"
         android:text="당겨라"/>
 
-<!--    <EditText
-        android:layout_width="700px"
-        android:layout_height="100px"
-        android:background="@drawable/ask_radius_2"
-        android:backgroundTint="@color/white"
-        android:layout_gravity="center"
-        android:hint="Q. 당신의 질문을 적어주세요."
-        android:textSize="45px"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:layout_marginTop="30px"/>-->
-<!--    주완이와 선우의 운세(luck)xml페이지-->
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btn_go_calendar"
             android:layout_width="400px"
             android:layout_height="wrap_content"
             android:layout_marginTop="100px"
