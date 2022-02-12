@@ -30,8 +30,8 @@ import java.util.List;
 public class Luck extends AppCompatActivity {
     LuckAnswer.myDBHelper myDBHelper;
     SQLiteDatabase sqlDB;
-    Animation luck_anim;
-    ImageView image;
+    Animation animation;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +50,8 @@ public class Luck extends AppCompatActivity {
         sqlDB = myDBHelper.getReadableDatabase();
         sqlDB.execSQL("delete from luckTB where testDate = '2022-02-11'");
 
-        luck_anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.luck_anim);
-        image = (ImageView) findViewById(R.id.image);
+        animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.luck_anim);
+        imageView = (ImageView) findViewById(R.id.image);
 
         Cursor cursor = sqlDB.rawQuery("SELECT * FROM luckTB where testDate = '" + getTime + "';", null);
 
@@ -91,7 +91,7 @@ public class Luck extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    image.startAnimation(luck_anim);
+                    imageView.startAnimation(animation);
                     Intent intent = new Intent(getApplicationContext(), LuckAnswer.class);
                     startActivity(intent);
                     finish();
