@@ -42,6 +42,7 @@
             android:layout_marginLeft="40dp"/>
 
         <Button
+            android:id="@+id/btn_go_ask"
             android:layout_width="400px"
             android:layout_height="wrap_content"
             android:layout_marginTop="100px"

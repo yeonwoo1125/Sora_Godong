@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AskAnswer extends AppCompatActivity {
 //    1번작업
     Button btn_go_calendar;
+    Button btn_go_ask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +29,17 @@ public class AskAnswer extends AppCompatActivity {
                 finish();
             }
         });
+
+        btn_go_ask = findViewById(R.id.btn_go_ask);
+
+        btn_go_ask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AskMain.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
+
 }
