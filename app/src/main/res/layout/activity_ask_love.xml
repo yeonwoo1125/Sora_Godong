@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background">
+    android:background="@drawable/ask_background">
     <!--주완아 보이니~-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="265dp"
-        android:src="@drawable/main_character"
-        android:layout_marginTop="400px"/>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="265dp"-->
+<!--        android:src="@drawable/main_character"-->
+<!--        android:layout_marginTop="400px"/>-->
     <EditText
         android:layout_width="700px"
         android:layout_height="100px"
@@ -19,6 +19,7 @@
         android:layout_gravity="center"
         android:hint="Q. 당신의 질문을 적어주세요."
         android:textSize="45px"
+        android:layout_marginTop="520dp"
         android:gravity="center"
         android:textStyle="bold"
  />
