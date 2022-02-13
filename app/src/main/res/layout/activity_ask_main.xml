@@ -3,13 +3,43 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
-    <TextView
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50dp"
-        android:text="주완이 성공!"
-        android:gravity="center_horizontal">
-    </TextView>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ask_food"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ask_food" />
+
+            <ImageView
+                android:id="@+id/ask_study"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ask_study" />
+
+            <ImageView
+                android:id="@+id/ask_love"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ask_love" />
+            <ImageView
+                android:id="@+id/ask_money"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ask_money" />
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>
