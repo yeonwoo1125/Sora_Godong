@@ -8,38 +8,86 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_height="400dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/ask_food"
-                android:layout_width="300dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ask_food" />
-
-            <ImageView
-                android:id="@+id/ask_study"
-                android:layout_width="300dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_food"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_food" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="飮食 보살"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ask_study" />
-
-            <ImageView
-                android:id="@+id/ask_love"
-                android:layout_width="300dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_study"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_study" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="學業 보살"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ask_love" />
-            <ImageView
-                android:id="@+id/ask_money"
-                android:layout_width="300dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_love"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_love" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="舍廊 보살"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ask_money" />
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_money"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_money" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="財物 보살"/>
+            </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
 </LinearLayout>
