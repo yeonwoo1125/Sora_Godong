@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".AskAnswer"/>
         <activity android:name=".AskMain"/>
+        <activity android:name=".AskLove"/>
     </application>
 
 </manifest>

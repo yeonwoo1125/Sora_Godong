@@ -3,13 +3,91 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
-    <TextView
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50dp"
-        android:text="주완이 성공!"
-        android:gravity="center_horizontal">
-    </TextView>
+        android:layout_marginTop="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_food"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_food" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="飮食 보살"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_study"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_study" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="學業 보살"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_love"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_love" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="舍廊 보살"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ask_money"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:src="@drawable/ask_money" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="財物 보살"/>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>

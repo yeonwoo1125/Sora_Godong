@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background">
+    android:background="@drawable/ask_background">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="265dp"
-        android:src="@drawable/main_character"
-        android:layout_marginTop="400px"/>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="265dp"-->
+<!--        android:src="@drawable/main_character"-->
+<!--        android:layout_marginTop="400px"/>-->
 
     <TextView
         android:layout_width="700px"
@@ -20,6 +20,7 @@
         android:backgroundTint="@color/white"
         android:layout_gravity="center"
         android:textSize="45px"
+        android:layout_marginTop="520dp"
         android:gravity="center"
         android:textStyle="bold"
         android:text="당겨라"/>
@@ -42,6 +43,7 @@
             android:layout_marginLeft="40dp"/>
 
         <Button
+            android:id="@+id/btn_go_ask"
             android:layout_width="400px"
             android:layout_height="wrap_content"
             android:layout_marginTop="100px"
