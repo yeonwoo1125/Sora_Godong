@@ -6,9 +6,12 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -121,6 +124,15 @@ public class LuckAnswer extends AppCompatActivity{
             finish(); // 액티비티(LuckAnswer) 종료
         }
 
+        LinearLayout linear1, linear2, linear3;
+        linear1 = findViewById(R.id.linear1);
+        linear2 = findViewById(R.id.linear2);
+        linear3 = findViewById(R.id.linear3);
+
+        linear1.setOnClickListener(linearListner);
+        linear2.setOnClickListener(linearListner);
+        linear3.setOnClickListener(linearListner);
+
     }
 
     static class myDBHelper extends SQLiteOpenHelper {
@@ -140,6 +152,27 @@ public class LuckAnswer extends AppCompatActivity{
 
         }
     }
+
+    View.OnClickListener linearListner = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent;
+            switch (v.getId()) {
+                case R.id.linear1:
+                    intent = new Intent(getApplicationContext(), AskMain.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear2:
+                    intent = new Intent(getApplicationContext(), Calendar.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear3:
+                    intent = new Intent(getApplicationContext(), Luck.class);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    };
 
 
 }
