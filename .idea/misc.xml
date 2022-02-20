@@ -3,14 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Major/android/Sora_Godong/app/src/main/res/drawable/border.xml" value="0.20729166666666668" />
-        <entry key="..\:/Major/android/Sora_Godong/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18055555555555555" />
-        <entry key="..\:/Major/android/Sora_Godong/app/src/main/res/layout/activity_ask_answer.xml" value="0.1" />
-        <entry key="..\:/Major/android/Sora_Godong/app/src/main/res/layout/activity_calendar.xml" value="0.19662921348314608" />
-        <entry key="..\:/Major/android/Sora_Godong/app/src/main/res/layout/activity_diary.xml" value="0.2" />
-        <entry key="..\:/Major/android/Sora_Godong/app/src/main/res/layout/activity_luck.xml" value="0.10144927536231885" />
-        <entry key="..\:/Major/android/Sora_Godong/app/src/main/res/layout/activity_main.xml" value="0.10144927536231885" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.31851851851851853" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/drawable/ask_radius.xml" value="0.31851851851851853" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/drawable/ask_radius_2.xml" value="0.31851851851851853" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/drawable/ic_launcher_background.xml" value="0.35625" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/drawable/luck_btn.xml" value="0.35625" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_ask_answer.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_ask_food.xml" value="0.2905405405405405" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_ask_love.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_ask_main.xml" value="0.17230070635721492" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_ask_money.xml" value="0.2905405405405405" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_ask_study.xml" value="0.2905405405405405" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_calendar.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_diary.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_luck.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/User/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_main.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/apf_temp_admin/StudioProjects/Sora_Godong/app/src/main/res/drawable/ask_radius.xml" value="0.21481481481481482" />
+        <entry key="..\:/Users/apf_temp_admin/StudioProjects/Sora_Godong/app/src/main/res/drawable/luck_btn.xml" value="0.21944444444444444" />
+        <entry key="..\:/Users/apf_temp_admin/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_ask_love.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/apf_temp_admin/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_luck.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/apf_temp_admin/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_luckanswer.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/apf_temp_admin/StudioProjects/Sora_Godong/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>
