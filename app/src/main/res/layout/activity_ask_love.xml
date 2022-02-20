@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/love_img">
-    <!--주완아 보이니~-->
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="265dp"-->
-<!--        android:src="@drawable/main_character"-->
-<!--        android:layout_marginTop="400px"/>-->
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@drawable/love_img"
+        android:orientation="vertical"
+        android:gravity="center">
     <EditText
         android:layout_width="700px"
         android:layout_height="100px"
@@ -24,18 +25,18 @@
         android:textStyle="bold"
  />
 
-    <Button
-        android:id="@+id/btn_answer"
-        android:layout_width="550px"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="질문 받기"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:backgroundTint="#D2B3DC"
-        android:background="@drawable/ask_radius"/>
-<!--    <LinearLayout-->
+        <Button
+            android:id="@+id/btn_answer"
+            android:layout_width="550px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ask_radius"
+            android:text="질문 받기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:backgroundTint="#D2B3DC" />
+        <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:orientation="horizontal">-->
@@ -43,4 +44,56 @@
 <!--            android:layout_width=""-->
 <!--            android:layout_height=""-->
 <!--    </LinearLayout>-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#646464">
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu1"
+                android:alpha="0.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu2"
+                android:alpha="0.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu3"
+                />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
