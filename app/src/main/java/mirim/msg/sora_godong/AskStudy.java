@@ -27,4 +27,24 @@ public class AskStudy extends AppCompatActivity {
             }
         });
     }
+    View.OnClickListener linearListner = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent;
+            switch (v.getId()) {
+                case R.id.linear1:
+                    intent = new Intent(getApplicationContext(), AskMain.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear2:
+                    intent = new Intent(getApplicationContext(), Calendar.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear3:
+                    intent = new Intent(getApplicationContext(), Luck.class);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    };
 }
