@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +27,14 @@ public class AskLove extends AppCompatActivity {
                 finish();
             }
         });
+        LinearLayout linear1, linear2, linear3;
+        linear1 = findViewById(R.id.linear1);
+        linear2 = findViewById(R.id.linear2);
+        linear3 = findViewById(R.id.linear3);
+
+        linear1.setOnClickListener(linearListner);
+        linear2.setOnClickListener(linearListner);
+        linear3.setOnClickListener(linearListner);
     }
     View.OnClickListener linearListner = new View.OnClickListener() {
         @Override

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -53,6 +54,33 @@ public class AskMain extends AppCompatActivity {
                 finish();
             }
         });
+        LinearLayout linear1, linear2, linear3;
+        linear1 = findViewById(R.id.linear1);
+        linear2 = findViewById(R.id.linear2);
+        linear3 = findViewById(R.id.linear3);
 
+        linear1.setOnClickListener(linearListner);
+        linear2.setOnClickListener(linearListner);
+        linear3.setOnClickListener(linearListner);
     }
+    View.OnClickListener linearListner = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent;
+            switch (v.getId()) {
+                case R.id.linear1:
+                    intent = new Intent(getApplicationContext(), AskMain.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear2:
+                    intent = new Intent(getApplicationContext(), Calendar.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear3:
+                    intent = new Intent(getApplicationContext(), Luck.class);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    };
 }
