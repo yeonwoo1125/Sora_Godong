@@ -3,7 +3,8 @@ package mirim.msg.sora_godong;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import java.util.Date;
+import android.util.Log;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,15 +21,17 @@ public class Calendar extends AppCompatActivity{
 
     //캘린더 커스텀을 위해 깃허브 라이브러리를 사용
     MaterialCalendarView calendarView;
+    SQLiteDatabase db;
+    DbHelper dbHelper;
 
-    private DbHelper dbHelper;
-    private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
+        dbHelper = new DbHelper(this,4);
+        db = dbHelper.getWritableDatabase();
 
         calendarView = (MaterialCalendarView) findViewById(R.id.calendar);
 
@@ -36,14 +39,20 @@ public class Calendar extends AppCompatActivity{
         calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-                Intent intent = new Intent(getApplicationContext(), Diary.class);
-                startActivity(intent);
+                String today = getToday_date();
+                Log.d("today", ""+today);
+                //dbHelper.insertDate(db,today);
 
+                Intent intent = new Intent(getApplicationContext(), Diary.class);
+                intent.putExtra("date",getToday_date());
+                startActivity(intent);
             }
         });
+
     }
-    public String getToday_date () {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-        return simpleDateFormat.format((Date) calendarView.getSelectedDate().getDate()).toString();
+    //캘린더의 날짜를 받아옴(yyyyMMdd)
+    public String getToday_date() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(calendarView.getSelectedDate().getDate());
     }
 }

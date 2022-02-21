@@ -1,5 +1,6 @@
 package mirim.msg.sora_godong;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -25,8 +26,7 @@ public class DbHelper extends SQLiteOpenHelper {
     //table 생성
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE calendar(today_date VARCHAR(20) NOT NULL, question TEXT NOT NULL, today_diary TEXT, PRIMARY KEY(today_date))");
-
+        db.execSQL("CREATE TABLE calendar(today_date VARCHAR(20) NOT NULL, question TEXT, answer TEXT, today_diary TEXT, PRIMARY KEY(today_date))");
     }
 
     @Override
@@ -35,15 +35,17 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    //캘린더의 날짜를 받아옴(yyyyMMdd)
-    public String getToday_date(MaterialCalendarView cv) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-        return simpleDateFormat.format((Date) cv.getSelectedDate().getDate()).toString();
+    public void insertDiary(SQLiteDatabase db, String content, String todayDate){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("today_date",todayDate);
+        contentValues.put("today_diary",content);
+
+        db.insert(TABLE_NAME,null, contentValues);
     }
 
     //db에 저장된 날짜 확인
     public String selectDate(SQLiteDatabase db, String selectDate){
-        String sql = "SELECT today_date FROM "+TABLE_NAME+" WHERE today_date = "+selectDate;
+        String sql = "SELECT * FROM "+TABLE_NAME+" WHERE today_date = "+selectDate;
         Cursor cursor = db.rawQuery(sql, null);
         String date="";
         while(cursor.moveToNext()){
