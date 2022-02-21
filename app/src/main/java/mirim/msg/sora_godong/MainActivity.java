@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btn_ask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AskAnswer.class);
+                Intent intent = new Intent(getApplicationContext(), AskMain.class);
                 startActivity(intent);
             }
         });

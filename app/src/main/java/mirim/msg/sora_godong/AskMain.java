@@ -24,7 +24,7 @@ public class AskMain extends AppCompatActivity {
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AskLove.class);
+                Intent intent = new Intent(getApplicationContext(), AskFood.class);
                 startActivity(intent);
                 finish();
             }
@@ -32,7 +32,7 @@ public class AskMain extends AppCompatActivity {
         study.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AskLove.class);
+                Intent intent = new Intent(getApplicationContext(), AskStudy.class);
                 startActivity(intent);
                 finish();
             }
@@ -48,7 +48,7 @@ public class AskMain extends AppCompatActivity {
         money.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AskLove.class);
+                Intent intent = new Intent(getApplicationContext(), AskMoney.class);
                 startActivity(intent);
                 finish();
             }

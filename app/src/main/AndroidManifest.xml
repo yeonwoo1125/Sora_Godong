@@ -23,6 +23,9 @@
         <activity android:name=".AskAnswer"/>
         <activity android:name=".AskMain"/>
         <activity android:name=".AskLove"/>
+        <activity android:name=".AskFood"/>
+        <activity android:name=".AskStudy"/>
+        <activity android:name=".AskMoney"/>
     </application>
 
 </manifest>
