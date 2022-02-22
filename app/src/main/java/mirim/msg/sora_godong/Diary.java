@@ -1,6 +1,7 @@
 package mirim.msg.sora_godong;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -44,6 +45,7 @@ public class Diary extends AppCompatActivity {
                 dbHelper.insertDiary(db, content, date);
             }
         });
+
     }
 
 }
