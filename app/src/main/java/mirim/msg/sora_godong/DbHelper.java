@@ -55,14 +55,15 @@ public class DbHelper extends SQLiteOpenHelper {
 
         return date;
     }
-    public String selectDiary(SQLiteDatabase db, String selectDiary){
-        String sql = "SELECT * FROM "+TABLE_NAME+" WHERE today_date = " + selectDiary;
-        Cursor c = db.rawQuery(sql, null);
-        String diary="";
-        while(c.moveToNext()) {
-            diary = c.getString(0);
-        }
-        c.close();
-        return diary;
-    }
+
+//    public String selectDiary(SQLiteDatabase db, String selectDiary){
+//        String sql = "SELECT * FROM TABLE_NAME WHERE today_date = selectDiary";
+//        Cursor c = db.rawQuery(sql, null);
+//        String diary="";
+//        while(c.moveToNext()) {
+//            diary = c.getString(0);
+//        }
+//        c.close();
+//        return diary;
+//    }
 }
