@@ -39,9 +39,6 @@ public class Calendar extends AppCompatActivity{
         calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-                String today = getToday_date();
-                Log.d("today", ""+today);
-                //dbHelper.insertDate(db,today);
 
                 Intent intent = new Intent(getApplicationContext(), Diary.class);
                 intent.putExtra("date",getToday_date());

@@ -56,6 +56,33 @@ public class DbHelper extends SQLiteOpenHelper {
         return date;
     }
 
+    //테스트 후 대답과 질문 가져오는 메서드 합칠 예정
+    //질문 가져오는 메서드
+    public String getQuestion(SQLiteDatabase db, String selectDate){
+        String sql = "SELECT question FROM "+TABLE_NAME+" WHERE today_date = "+selectDate;
+        Cursor cursor = db.rawQuery(sql, null);
+        String question="";
+        while(cursor.moveToNext()){
+            question = cursor.getString(0);
+        }
+        cursor.close();
+
+        return question;
+    }
+
+    //대답 가져오는 메서드
+    public String getAnswer(SQLiteDatabase db, String selectDate){
+        String sql = "SELECT answer FROM "+TABLE_NAME+" WHERE today_date = "+selectDate;
+        Cursor cursor = db.rawQuery(sql, null);
+        String answer="";
+        while(cursor.moveToNext()){
+            answer = cursor.getString(0);
+        }
+        cursor.close();
+
+        return answer;
+    }
+
 //    public String selectDiary(SQLiteDatabase db, String selectDiary){
 //        String sql = "SELECT * FROM TABLE_NAME WHERE today_date = selectDiary";
 //        Cursor c = db.rawQuery(sql, null);
