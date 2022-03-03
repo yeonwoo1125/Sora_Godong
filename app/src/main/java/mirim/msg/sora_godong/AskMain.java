@@ -2,10 +2,12 @@ package mirim.msg.sora_godong;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AskMain extends AppCompatActivity {
@@ -16,6 +18,9 @@ public class AskMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ask_main);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setTitle("질문하기 메인");
 
         food = findViewById(R.id.ask_food);
         study = findViewById(R.id.ask_study);

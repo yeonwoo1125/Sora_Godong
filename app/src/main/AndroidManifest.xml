@@ -26,6 +26,7 @@
         <activity android:name=".AskFood"/>
         <activity android:name=".AskStudy"/>
         <activity android:name=".AskMoney"/>
+        <activity android:name=".AskReAnswer"/>
     </application>
 
 </manifest>

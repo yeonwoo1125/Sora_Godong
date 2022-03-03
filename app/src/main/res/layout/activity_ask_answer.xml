@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100px"
             android:background="@drawable/ask_radius"
-            android:text="다시 질문하기"
+            android:text="답변하기"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:backgroundTint="#D2B3DC"
