@@ -17,6 +17,7 @@ import android.os.Handler;
 import android.text.Layout;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -41,6 +42,9 @@ public class Luck extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setTitle("오늘의 운세는?");
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

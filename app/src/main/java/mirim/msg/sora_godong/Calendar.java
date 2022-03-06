@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,9 @@ public class Calendar extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setTitle("나만의 캘린더에 저장해봐!");
 
         dbHelper = new DbHelper(this,4);
         db = dbHelper.getWritableDatabase();
