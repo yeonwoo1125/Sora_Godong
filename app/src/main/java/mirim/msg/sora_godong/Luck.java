@@ -46,8 +46,8 @@ public class Luck extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setTitle("오늘의 운세는?");
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.hide();
 
         myDBHelper = new LuckAnswer.myDBHelper(this);
 
