@@ -6,33 +6,92 @@
     android:orientation="vertical"
     android:background="@drawable/ask_background">
 
-    <TextView
-        android:layout_width="700px"
-        android:layout_height="120px"
-        android:background="@drawable/ask_radius_2"
-        android:backgroundTint="@color/white"
-        android:layout_gravity="center"
-        android:textSize="45px"
-        android:layout_marginTop="520dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:text="나의 답변이 어때?"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="400px"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100px"
-            android:background="@drawable/ask_radius"
-            android:text="저장하기"
-            android:textColor="@color/black"
+        <TextView
+            android:layout_width="700px"
+            android:layout_height="120px"
+            android:background="@drawable/ask_radius_2"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center"
+            android:textSize="45px"
+            android:layout_marginTop="520dp"
+            android:gravity="center"
             android:textStyle="bold"
-            app:backgroundTint="#D2B3DC" />
+            android:text="나의 답변이 어때?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="400px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100px"
+                android:background="@drawable/ask_radius"
+                android:text="저장하기"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:backgroundTint="#D2B3DC" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#646464">
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu1"
+                android:alpha="0.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu2"
+                android:alpha="0.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu3"
+                />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
