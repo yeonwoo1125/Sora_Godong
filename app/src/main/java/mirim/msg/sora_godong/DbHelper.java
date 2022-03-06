@@ -82,7 +82,21 @@ public class DbHelper extends SQLiteOpenHelper {
 
         return answer;
     }
+    //질문 저장하는 메서드
+    public void insertAsk(SQLiteDatabase db, String question){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("question",question);
 
+        db.insert(TABLE_NAME,null, contentValues);
+    }
+    //답변 저장하는 메서드
+    public void insertReAsk(SQLiteDatabase db, String answer){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("answer",answer);
+
+        db.insert(TABLE_NAME,null, contentValues);
+    }
+    //
 //    public String selectDiary(SQLiteDatabase db, String selectDiary){
 //        String sql = "SELECT * FROM TABLE_NAME WHERE today_date = selectDiary";
 //        Cursor c = db.rawQuery(sql, null);

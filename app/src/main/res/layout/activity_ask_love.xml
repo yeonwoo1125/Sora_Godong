@@ -14,6 +14,7 @@
         android:orientation="vertical"
         android:gravity="center">
     <EditText
+        android:id="@+id/input_ask"
         android:layout_width="700px"
         android:layout_height="100px"
         android:background="@drawable/ask_radius_2"
