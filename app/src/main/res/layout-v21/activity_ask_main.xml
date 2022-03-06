@@ -101,7 +101,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:background="#80000000">
+        android:background="#646464">
         <LinearLayout
             android:id="@+id/linear1"
             android:layout_width="0dp"
@@ -114,8 +114,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/menu1"
-                android:alpha="0.5"/>
+                android:src="@drawable/menu1"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/linear2"
@@ -144,7 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu3"
-                />
+                android:alpha="0.5"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
