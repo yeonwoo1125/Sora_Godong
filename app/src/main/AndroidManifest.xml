@@ -13,15 +13,16 @@
         <activity android:name=".LuckAnswer"></activity>
         <activity android:name=".Diary"/>
         <activity android:name=".Calendar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AskMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.i ntent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".AskAnswer"/>
-        <activity android:name=".AskMain"/>
+        <activity android:name=".MainActivity"/>
+<!--        <activity android:name=".AskMain"/>-->
         <activity android:name=".AskLove"/>
         <activity android:name=".AskFood"/>
         <activity android:name=".AskStudy"/>

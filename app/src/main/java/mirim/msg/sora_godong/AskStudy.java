@@ -2,6 +2,7 @@ package mirim.msg.sora_godong;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -17,6 +18,9 @@ public class AskStudy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ask_study);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("학업운보살님 안녕하세요");
+        
         answer = findViewById(R.id.btn_answer);
 
         answer.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +39,18 @@ public class AskStudy extends AppCompatActivity {
         linear1.setOnClickListener(linearListner);
         linear2.setOnClickListener(linearListner);
         linear3.setOnClickListener(linearListner);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
+                Intent intent = new Intent(getApplicationContext(), AskMain.class);
+                startActivity(intent);
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
     View.OnClickListener linearListner = new View.OnClickListener() {
         @Override

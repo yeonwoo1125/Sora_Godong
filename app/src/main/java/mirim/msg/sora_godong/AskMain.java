@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class AskMain extends AppCompatActivity {
 
@@ -19,8 +20,11 @@ public class AskMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ask_main);
 
+//        Toolbar toolbar = findViewById(R.id.next_toolbar);
+//        setSupportActionBar(toolbar);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setTitle("질문하기 메인");
+        getSupportActionBar().setTitle("보살님에게 질문해보세요!");
 
         food = findViewById(R.id.ask_food);
         study = findViewById(R.id.ask_study);
