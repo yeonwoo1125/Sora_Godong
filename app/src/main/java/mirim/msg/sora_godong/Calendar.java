@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
 
 import androidx.annotation.NonNull;
@@ -31,6 +33,15 @@ public class Calendar extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
+        LinearLayout linear1,linear2,linear3;
+        linear1 = findViewById(R.id.linear1);
+        linear2 = findViewById(R.id.linear2);
+        linear3 = findViewById(R.id.linear3);
+
+        linear1.setOnClickListener(linearListner);
+        linear2.setOnClickListener(linearListner);
+        linear3.setOnClickListener(linearListner);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setTitle("나만의 캘린더에 저장해봐!");
 
@@ -51,6 +62,28 @@ public class Calendar extends AppCompatActivity{
         });
 
     }
+
+    View.OnClickListener linearListner = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent;
+            switch(v.getId()) {
+                case R.id.linear1:
+                    intent = new Intent(getApplicationContext(),AskMain.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear2:
+                    intent = new Intent(getApplicationContext(),Calendar.class);
+                    startActivity(intent);
+                    break;
+                case R.id.linear3:
+                    intent = new Intent(getApplicationContext(),Luck.class);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    };
+
     //캘린더의 날짜를 받아옴(yyyyMMdd)
     public String getToday_date() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
