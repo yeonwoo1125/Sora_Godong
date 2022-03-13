@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <TextView
+        <EditText
             android:layout_width="700px"
             android:layout_height="120px"
             android:background="@drawable/ask_radius_2"
@@ -23,7 +23,7 @@
             android:layout_marginTop="520dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="나의 답변이 어때?"/>
+            android:hint="나의 답변이 어때?"/>
 
         <LinearLayout
             android:layout_width="match_parent"

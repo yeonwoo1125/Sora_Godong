@@ -21,6 +21,7 @@
         android:gravity="center">
 
         <TextView
+            android:id="@+id/bosal_answer"
             android:layout_width="700px"
             android:layout_height="120px"
             android:background="@drawable/ask_radius_2"
@@ -29,8 +30,7 @@
             android:textSize="45px"
             android:layout_marginTop="520dp"
             android:gravity="center"
-            android:textStyle="bold"
-            android:text="당겨라"/>
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="match_parent"

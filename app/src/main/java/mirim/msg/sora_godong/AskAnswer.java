@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,22 @@ public class AskAnswer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ask_answer);
+
+        String[] answer = {
+                "해봐", "하지마", "할라고?", "흠.그냥 그러네",
+                "맞아", "아니야", "정말?", "거짓말",
+                "이미 알고 있으면서", "답정너", "싫은데", "좋아",
+                "진실을 말해", "과연..?", "멋진걸", "그럴리가",
+
+                "와우", "ㅋㅋㅋㅋ", "망해", "너야말로",
+                "틀렸어", "오른쪽 주머니", "주위를 봐", "집가고싶다",
+                "무엇이든", "자니?", "뭐해~", "웃겨부러",
+                "글쎄", "답답하다", "오늘은 집콕", "일단 나가"
+        };
+
+        int r = (int)(Math.random()*32);
+        TextView aw = findViewById(R.id.bosal_answer);
+        aw.setText(answer[r]);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setTitle("보살님께서 내리신 답변입니다!");
